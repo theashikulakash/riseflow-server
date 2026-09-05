@@ -150,4 +150,4 @@ Protected routes require the Better Auth session cookie. The client must send re
 
 ## Related project
 
-The React frontend is documented in [`../client/README.md`](../client/README.md).
+The React frontend is documented in [`https://github.com/theashikulakash/RiseFlow/README.md`](../client/README.md).
