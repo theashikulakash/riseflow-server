@@ -119,7 +119,7 @@ Register the user normally first, then run:
 node scripts/makeAdmin.js user@example.com
 ```
 
-The user must log out and log in again for the updated role to be reflected in the session/profile.
+The user must log out and log in again for the updated role to be reflected in the session/profile for admin profile.
 
 ## API overview
 
