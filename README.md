@@ -101,8 +101,12 @@ MONGODB_URI=your_production_mongodb_uri
 In Google Cloud Console, create a Web application OAuth client and add these authorized redirect URIs:
 
 ```text
+
+For local server
 http://localhost:5000/api/auth/callback/google
-https://riseflow-server.vercel.app/api/auth/callback/google
+
+For deployed server
+deployed-server-api-url/api/auth/callback/google
 ```
 
 The callback URI must match the deployed server Environment Variables URL exactly, including the path and the absence of a trailing slash.
