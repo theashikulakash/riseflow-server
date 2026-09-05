@@ -100,8 +100,8 @@ The API runs on `http://localhost:5000` by default.
 For production, configure Vercel or another host with:
 
 ```env
-CLIENT_URL=https://riseflow-ten.vercel.app
-BETTER_AUTH_URL=https://riseflow-server.vercel.app
+CLIENT_URL=deployed-client-side-url
+BETTER_AUTH_URL=deployed-server-side-url
 BETTER_AUTH_SECRET=the_same_stable_secret_used_for_the_deployment
 MONGODB_URI=your_production_mongodb_uri
 ```
