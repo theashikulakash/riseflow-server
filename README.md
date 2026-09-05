@@ -18,6 +18,7 @@ The server provides the secure business layer for RiseFlow. It handles authentic
 - Campaign creation, approval, rejection, suspension, and deletion.
 - Contribution lifecycle with creator approval or rejection.
 - Credit economy: supporters purchase credits and use them to support campaigns.
+- Registration bonus: new supporters receive 50 free credits, while new creators receive 20 free credits. The bonus is granted once when the account is created, including Google sign-ups.
 - Creator withdrawal requests with admin processing.
 - Payment records and payment history.
 - Notifications for important campaign, contribution, and withdrawal events.
@@ -72,6 +73,15 @@ STRIPE_SECRET_KEY=your_stripe_secret_key
 ```
 
 `STRIPE_SECRET_KEY` is optional when the dummy payment flow is acceptable. Keep `.env` private and never expose server secrets in the client.
+
+### Free registration credits
+
+Every newly registered account receives a one-time free credit bonus:
+
+- Supporter accounts: **50 credits**
+- Creator accounts: **20 credits**
+
+The bonus is applied automatically during account creation and is also available to users who register with Google.
 
 Generate a secret with:
 
