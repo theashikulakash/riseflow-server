@@ -105,7 +105,7 @@ http://localhost:5000/api/auth/callback/google
 https://riseflow-server.vercel.app/api/auth/callback/google
 ```
 
-The callback URI must match the deployed server URL exactly, including the path and the absence of a trailing slash.
+The callback URI must match the deployed server Environment Variables URL exactly, including the path and the absence of a trailing slash.
 
 ## Make a user an admin
 
