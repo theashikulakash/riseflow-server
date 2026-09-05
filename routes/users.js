@@ -30,6 +30,29 @@ router.get("/me", requireAuth, async (req, res) => {
   res.json({ ...me, role, credits });
 });
 
+// PATCH /api/users/me - update the current user's profile image
+router.patch("/me", requireAuth, async (req, res) => {
+  const { image } = req.body;
+
+  if (typeof image !== "string" || !image.trim()) {
+    return res.status(400).json({ message: "A valid profile image URL is required" });
+  }
+
+  const userId = new ObjectId(req.user.id);
+  const imageUrl = image.trim();
+  const result = await users().findOneAndUpdate(
+    { _id: userId },
+    { $set: { image: imageUrl } },
+    { returnDocument: "after" }
+  );
+
+  if (!result) {
+    return res.status(404).json({ message: "User profile not found" });
+  }
+
+  res.json(result);
+});
+
 // GET /api/users - admin: list all users
 router.get("/", requireAuth, requireRole("admin"), async (req, res) => {
   const all = await users()
