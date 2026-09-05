@@ -57,7 +57,7 @@ Create `.env`:
 
 ```env
 PORT=5000
-CLIENT_URL=http://localhost:5173
+CLIENT_URL=http://localhost:3000
 
 MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/crowdfunding
 
